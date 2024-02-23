@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if book %}Update Book{% else %}Create New Book{% endif %}</title>
+</head>
+<body>
+    <h1>{% if book %}Update Book{% else %}Create New Book{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{% if book %}{{ book.title }}{% endif %}"><br>
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" value="{% if book %}{{ book.author }}{% endif %}"><br>
+        <label for="publication_date">Publication Date:</label><br>
+        <input type="date" id="publication_date" name="publication_date" value="{% if book %}{{ book.publication_date }}{% endif %}"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

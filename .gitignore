@@ -1,0 +1,10 @@
+# Ignore secret key file
+.env
+# Ignore compiled Python files
+/*/__pycache__/
+/*/migrations/
+*.pyc
+*.pyo
+*.pyd
+/*/myenv
+.git
