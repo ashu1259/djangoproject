@@ -8,3 +8,5 @@
 *.pyd
 /*/myenv
 .git
+Dockerfile
+docker-compose.yml
